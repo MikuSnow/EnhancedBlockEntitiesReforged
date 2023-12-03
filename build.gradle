@@ -127,9 +127,9 @@ repositories {
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
     // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
-    // flatDir {
-    //     dir 'libs'
-    // }
+     flatDir {
+         dir 'libs'
+     }
     maven {
         url "https://www.cursemaven.com"
         content {
@@ -148,11 +148,12 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-    implementation fg.deobf("curse.maven:brrp-618156:${brrp_mod_file_id}") {
-        jarJar.ranged(it, "[0.9.0,)")
-    }
+//    implementation fg.deobf("curse.maven:brrp-618156:${brrp_mod_file_id}") {
+//        jarJar.ranged(it, "[0.9.0,)")
+//    }
+    implementation fg.deobf("pers.solid:brrp-forge-1.18.1:0.8.2")
     implementation fg.deobf("curse.maven:rubidium-574856:${rubidium_mod_file_id}")
-    implementation fg.deobf("maven.modrinth:reforgium:${reforgium_mod_version}")
+    implementation fg.deobf("maven.modrinth:reforgium-1.18.2:1.0.12a")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
