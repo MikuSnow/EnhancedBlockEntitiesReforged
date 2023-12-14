@@ -14,7 +14,6 @@
     "ChestBlockEntityMixin",
     "EnderChestBlockEntityMixin",
     "WorldRendererMixin",
-    "LifecycledResourceManagerImplMixin",
     "ModelBakeryMixin",
     "ShulkerBoxBlockEntityMixin",
     "SignBlockEntityRenderAccessor",
